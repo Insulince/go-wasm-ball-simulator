@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"syscall/js"
 	"time"
-	"wasm-test/wasm/window"
+	"wasm-ball-simulator/wasm/window"
 )
 
 func init() {
