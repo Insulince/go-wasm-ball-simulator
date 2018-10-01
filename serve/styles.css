@@ -1,3 +1,7 @@
+html, body {
+    background-color: #dfdfdf;
+}
+
 .loader {
     position: absolute;
 
@@ -27,4 +31,14 @@
     100% {
         transform: rotate(360deg)
     }
+}
+
+#ball {
+    border: solid 3px black;
+    border-radius: 100%;
+
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
 }

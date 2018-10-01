@@ -26,3 +26,15 @@ func AddEventHandler(element js.Value, onEvent string, callback func(values []js
 func AddOnClick(element js.Value, callback func(values []js.Value)) {
 	AddEventHandler(element, "onclick", callback)
 }
+
+func AddOnMouseDown(element js.Value, callback func(values []js.Value)) {
+	AddEventHandler(element, "onmousedown", callback)
+}
+
+func AddOnMouseUp(element js.Value, callback func(values []js.Value)) {
+	AddEventHandler(element, "onmouseup", callback)
+}
+
+func AddOnMouseMove(element js.Value, callback func(values []js.Value)) {
+	AddEventHandler(element, "onmousemove", callback)
+}
