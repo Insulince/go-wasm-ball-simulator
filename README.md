@@ -1,1 +1,1 @@
-# Go WASM goroutines
+# Go Wasm Ball Simulator
