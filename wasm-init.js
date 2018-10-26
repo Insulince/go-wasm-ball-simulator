@@ -3,8 +3,9 @@ try {
         return new Promise(
             (resolve, reject) => {
                 console.log("Initializing Web Assembly...");
+                console.log(JSON.stringify(window.WebAssembly));
                 if ("WebAssembly" in window) {
-                    alert(JSON.stringify(window.WebAssembly));
+                    console.log(JSON.stringify(window.WebAssembly));
                     window.WebAssembly.instantiateStreaming(fetch(wasmFileLocation), go.importObject).then(
                         (instanceDetails) => {
                             console.log("Success: Web Assembly initialized.");
