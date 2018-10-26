@@ -1,5 +1,5 @@
-.idea/
-bin/
-!bin/.gitkeep
-serve/bin
-!serve/bin/.gitkeep
+/.idea/
+/bin/
+!/bin/.gitkeep
+/serve/bin/
+!/serve/bin/.gitkeep
