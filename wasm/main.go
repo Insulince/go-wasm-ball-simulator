@@ -1,8 +1,6 @@
 package main
 
 import (
-	"io/ioutil"
-	"net/http"
 	"syscall/js"
 	"time"
 	"wasm-ball-simulator/wasm/models"
@@ -11,26 +9,9 @@ import (
 
 var dragging = false
 
-func init() {
-	renderDefaultHtml()
-}
-
-func renderDefaultHtml() {
-	defaultHtmlLocation := "/default.html"
-
-	htmlResponse, err := http.Get(defaultHtmlLocation)
-	if err != nil {
-		panic(err)
-	}
-	defer htmlResponse.Body.Close()
-	defaultHtml, err := ioutil.ReadAll(htmlResponse.Body)
-	if err != nil {
-		panic(err)
-	}
-	window.Body().Set("innerHTML", string(defaultHtml))
-}
-
 func main() {
+	window.Body().Set("innerHTML", "")
+
 	window.AddOnMouseDown(
 		window.Document(),
 		func(values []js.Value) {

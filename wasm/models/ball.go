@@ -32,8 +32,11 @@ type Ball struct {
 }
 
 func NewBall(radius float64, x float64, y float64) (ball *Ball) {
-	nativeElement := window.GetElementById("ball")
-	return &Ball{Element: &nativeElement, Radius: radius, X: x, Y: y}
+	div := window.Document().Call("createElement", "div")
+	div.Set("id", "ball")
+	div.Get("classList").Call("add", "ball")
+	window.Body().Call("appendChild", div)
+	return &Ball{Element: &div, Radius: radius, X: x, Y: y}
 }
 
 func (b *Ball) Drag(clickEvent js.Value) {
