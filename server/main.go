@@ -39,7 +39,14 @@ func main() {
 	fileServer := http.FileServer(http.Dir(ServeFrom))
 	http.Handle("/", fileServer)
 
-	fmt.Printf("Listening on port 3000...\n")
-	err := http.ListenAndServe(":3000", nil)
+	var port string
+	if value, present := os.LookupEnv("PORT"); present {
+		port = value
+	} else {
+		log.Fatalln("No \"PORT\" environment variable set, cannot proceed!")
+	}
+
+	fmt.Printf("Listening on port \"%v\"...\n", port)
+	err := http.ListenAndServe(fmt.Sprintf(":%v", port), nil)
 	log.Fatalf("Serve error: %v\n", err)
 }

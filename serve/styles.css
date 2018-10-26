@@ -33,7 +33,7 @@ html, body {
     }
 }
 
-#ball {
+.ball {
     border: solid 3px black;
     border-radius: 100%;
 
