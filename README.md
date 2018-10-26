@@ -2,6 +2,12 @@
 
 A simple simulator of a ball bouncing around your screen that is affected by gravity, restitution, and friction. It can be dragged and flung around via mouse.
 
+## Live Demo
+
+A live demo can be viewed here: [https://insulince.github.io/go-wasm-ball-simulator/](https://insulince.github.io/go-wasm-ball-simulator/)
+
+Do note that because GitHub Pages is pretty strict about what you can use on its hosting platform, the `wasm_exec.js` may become out of date (it isn't updated dynamically), so the live demo may stop working at some point.
+
 ## Structure
 
 ```
