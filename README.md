@@ -54,7 +54,7 @@ go build -o "./bin/server" "./server"
 Compile the Wasm.
 
 ```bash
-GOARCH=wasm GOOS=js go build -o "serve/bin/out.wasm" "./wasm"
+GOARCH=wasm GOOS=js go build -o "./serve/bin/out.wasm" "./wasm"
 ```
 
 Run the serve to download `wasm_exec.js` into `serve/bin` and to begin serving files. Set your own value for `port`
